@@ -1,0 +1,52 @@
+id,name,customer_name,address,lat,lon,product,size,weight_kg
+0,Central Depot,Gandhipuram Central Logistics Hub,Cross Cut Road Gandhipuram,11.0168,76.9558,Hub,Depot,0
+1,RS Puram Hub 1,Kavitha Sundaram,Diwan Bahadur Road RS Puram,11.0086,76.9452,Wireless Earbuds,Small (S),1
+2,RS Puram Hub 2,Manoj Kumar,DB Road North RS Puram,11.0112,76.9480,Air Fryer,Medium (M),6
+3,RS Puram Hub 3,Priya Natarajan,Cowley Brown Road RS Puram,11.0065,76.9421,Smartphone,Small (S),1
+4,RS Puram Hub 4,Suresh Babu,Thiruvenkatasamy Road RS Puram,11.0135,76.9430,Office Chair,Large (L),18
+5,Peelamedu Hub 1,Arunachalam S.,Avinashi Road Peelamedu,11.0287,77.0268,Laptop & Backpack,Medium (M),4
+6,Peelamedu Hub 2,Deepa Ramesh,TIDEL Park Phase 2 Peelamedu,11.0298,77.0305,Smart LED TV 43 Inch,Large (L),14
+7,Peelamedu Hub 3,Karthik Vignesh,Near PSG Tech College Peelamedu,11.0245,77.0028,Books & Stationery,Small (S),3
+8,Peelamedu Hub 4,Anitha Krishnan,Civil Aerodrome Road Peelamedu,11.0312,77.0380,Water Purifier,Medium (M),9
+9,Saravanampatti 1,Vigneshwaran R.,CHIL SEZ IT Corridor Saravanampatti,11.0805,76.9961,Monitor & Keyboard,Medium (M),7
+10,Saravanampatti 2,Meenakshi R.,Keeranatham Road Saravanampatti,11.0870,76.9995,Washing Machine 7kg,Large (L),42
+11,Saravanampatti 3,Gokul Anand,Sathy Road Saravanampatti,11.0760,76.9920,Clothing Apparel,Small (S),2
+12,Saravanampatti 4,Divya Bharathi,Near KGISL Campus Saravanampatti,11.0834,77.0012,Microwave Oven,Medium (M),15
+13,Singanallur 1,Rajendran M.,Trichy Road Singanallur,10.9992,77.0185,Industrial Drill Kit,Medium (M),8
+14,Singanallur 2,Shanthi Mohan,Kamarajar Road Singanallur,11.0045,77.0120,Groceries Carton,Large (L),22
+15,Singanallur 3,Prakash V.,Near Singanallur Bus Stand,10.9960,77.0225,Cosmetics & Perfumes,Small (S),1
+16,Singanallur 4,Bala Subramani,Vellalore Road Singanallur,10.9880,77.0250,Fitness Dumbbell Set,Large (L),25
+17,Ukkadam 1,Mohammed Ismail,Big Bazaar Street Ukkadam,10.9890,76.9602,Kitchen Cookware Set,Medium (M),5
+18,Ukkadam 2,Fathima Begum,South Ukkadam Market Road,10.9845,76.9580,Silk Sarees Box,Small (S),2
+19,Ukkadam 3,Abdul Rahim,Sungam Bypass Ukkadam,10.9912,76.9680,Soundbar Speaker,Medium (M),8
+20,Ukkadam 4,Ayesha Siddiq,Near Ukkadam Lake View Road,10.9820,76.9620,Induction Stove,Small (S),3
+21,Kuniyamuthur 1,Senthil Nathan,Palakkad Main Road Kuniyamuthur,10.9634,76.9540,Inverter Battery,Large (L),38
+22,Kuniyamuthur 2,Revathi K.,Sundarapuram Road Kuniyamuthur,10.9580,76.9590,Table Lamp & Decor,Small (S),2
+23,Kuniyamuthur 3,Dinesh Kumar,Babu Nagar Kuniyamuthur,10.9690,76.9510,Ceiling Fan Pack of 2,Medium (M),10
+24,Ganapathy 1,Muruganandam P.,Sathy Main Road Ganapathy,11.0398,76.9802,Electric Water Heater,Large (L),16
+25,Ganapathy 2,Lakshmi Narayanan,Maniakarampalayam Ganapathy,11.0450,76.9850,Tablet PC,Small (S),1
+26,Ganapathy 3,Chandran T.,Athipalayam Road Ganapathy,11.0520,76.9780,Coffee Maker,Small (S),3
+27,Ganapathy 4,Nithya Sri,Near Ganapathy Bus Stand,11.0360,76.9820,Vacuum Cleaner,Medium (M),9
+28,Vadavalli 1,Ganesan R.,Marudhamalai Road Vadavalli,11.0266,76.9022,Smartwatch & Band,Small (S),1
+29,Vadavalli 2,Swathi Lakshmi,Thondamuthur Road Vadavalli,11.0210,76.8980,Mattress Foldable,Large (L),20
+30,Vadavalli 3,Pradeep Raj,Navavoor Pirivu Vadavalli,11.0310,76.9110,Mixer Grinder 750W,Medium (M),6
+31,Thudiyalur 1,Vijayaraghavan K.,Mettupalayam Road Thudiyalur,11.0792,76.9405,Split AC Indoor Unit,Large (L),32
+32,Thudiyalur 2,Bhuvaneshwari S.,KNG Pudur Thudiyalur,11.0850,76.9360,Bluetooth Speaker,Small (S),2
+33,Thudiyalur 3,Ramesh Chandran,Vellakinar Pirivu Thudiyalur,11.0720,76.9440,Gaming Console,Medium (M),5
+34,Ondipudur 1,Naveen Prasad,Trichy Road Ondipudur,10.9950,77.0520,Solar Inverter Unit,Large (L),35
+35,Ondipudur 2,Geetha Devi,Irugur Road Ondipudur,11.0010,77.0580,Air Cooler,Large (L),18
+36,Ondipudur 3,Ashok Vardhan,Near Ondipudur Flyover,10.9920,77.0490,Footwear Box,Small (S),2
+37,Kovaipudur 1,Subramanian C.,Ashram School Road Kovaipudur,10.9388,76.9380,Heavy Car Jack Kit,Large (L),24
+38,Kovaipudur 2,Gayathri S.,T Stanes Colony Kovaipudur,10.9420,76.9410,Luggage Trolley Bag,Medium (M),7
+39,Kovaipudur 3,Venkatachalam R.,Kovaipudur Main Junction,10.9350,76.9320,Medical Supplies Box,Small (S),3
+40,Ramanathapuram 1,Natarajan Chettiar,Trichy Road Ramanathapuram,11.0003,76.9845,Kitchen Dishwasher,Large (L),36
+41,Ramanathapuram 2,Poornima M.,Nanjundapuram Road Ramanathapuram,10.9940,76.9890,Men Perfumes,Small (S),1
+42,Ramanathapuram 3,Venkatesh S.,Near Ramanathapuram Signal,11.0025,76.9810,Printer & Inks,Medium (M),8
+43,Saibaba Colony 1,Hemalatha R.,NSR Road Saibaba Colony,11.0289,76.9421,Electric Kettle,Small (S),2
+44,Saibaba Colony 2,Kishore Kumar,Alagesan Road Saibaba Colony,11.0320,76.9380,Mountain Bike (Boxed),Large (L),22
+45,Saibaba Colony 3,Sandhya Rani,Near Ganga Hospital Road,11.0250,76.9460,Women Handbag,Small (S),1
+46,Kurichi SIDCO 1,Madhavan P.,SIDCO Industrial Estate Kurichi,10.9502,76.9745,Heavy Motor Pump,Large (L),45
+47,Kurichi SIDCO 2,Shanmugam K.,Pollachi Main Road Kurichi,10.9540,76.9710,Power Tools Box,Medium (M),12
+48,Civil Aerodrome 1,Edwin Paul,Airport Road Sitra,11.0300,77.0434,DSLR Camera Kit,Medium (M),4
+49,Civil Aerodrome 2,Archana Devi,Near Airport Cargo Gate Sitra,11.0340,77.0480,Luxury Watch,Small (S),1
+50,Town Hall Market 1,Rajesh Khanna,Opp Clock Tower Town Hall,10.9950,76.9630,Home Theatre System,Large (L),28

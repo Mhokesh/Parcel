@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f3"><meta name="description" content="Parcel — a calmer way to plan your delivery day.">
+  <title>Parcel — A little more delivered.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script defer src="/static/js/app.js"></script>
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="Parcel home"><span class="brand-mark">p.</span> parcel<span class="brand-dot">®</span></a>
+  <span class="eyebrow workspace-label">YOUR WORKSPACE</span>
+  <nav aria-label="Main navigation">
+    <button class="nav-item active" data-tab="overview"><span>◫</span> Dispatch board <i>01</i></button>
+    <button class="nav-item" data-tab="orders"><span>▤</span> Orders <i id="order-count">—</i></button>
+    <button class="nav-item" data-tab="fleet"><span>⌁</span> Fleet & planning</button>
+    <button class="nav-item" data-tab="history"><span>◷</span> Recent dispatches</button>
+  </nav>
+  <div class="sidebar-note"><span class="small-orbit">↗</span><h3>Good routes.<br>Better days.</h3><p>A little less travel.<br>A little more delivered.</p><span class="eyebrow">MADE FOR THE LAST MILE</span></div>
+  <button class="profile" id="settings-open"><span class="avatar">G</span><span>Gandhipuram depot<small>Connection settings ↗</small></span></button>
+</aside>
+<main>
+  <header class="topbar"><span><span class="status-dot" id="connection-dot"></span><span id="connection">Connecting to your workspace</span></span><span id="today"></span></header>
+  <div id="notice" role="status" aria-live="polite" hidden></div>
+  <section id="overview" class="tab-panel">
+    <div class="page-heading"><div><span class="eyebrow">COIMBATORE, TAMIL NADU</span><h1>A little more <em>delivered.</em></h1><p>Your city. Your fleet. A thoughtfully planned day.</p></div><button class="button primary" id="plan-top">Plan my day <span>↗</span></button></div>
+    <div class="stats" id="stats"><div class="stat"><span>Orders assigned</span><strong>—</strong><small>Your next day starts here</small></div><div class="stat"><span>Planned distance</span><strong>—</strong><small>Across your available fleet</small></div><div class="stat"><span>Estimated fuel cost</span><strong>—</strong><small>Using your planning rates</small></div><div class="stat"><span>Delivered</span><strong>—</strong><small>Progress, one doorstep at a time</small></div></div>
+    <div class="board-grid"><article class="card map-card"><div class="card-heading"><div><span class="eyebrow">THE BIG PICTURE</span><h2>Your neighbourhood, connected.</h2></div><select id="route-filter" aria-label="Filter by vehicle"><option value="all">All vehicles</option></select></div><div id="map"><div class="map-fallback">Loading your city map…</div></div><div class="map-caption"><span><b class="status-dot"></b> Coimbatore delivery area</span><span id="map-source">Route lines connect stops; not driving directions</span></div></article>
+    <article class="card next-card" id="next-card"><span class="eyebrow">A FRESH START</span><div class="empty-illustration">↗</div><h2>Everything in<br>its right place.</h2><p>Add your orders, choose the fleet, and let’s make a plan.</p><button class="button secondary" data-go="fleet">Set up your fleet ↗</button><div class="note-pill">01 &nbsp; Plan. &nbsp; 02 &nbsp; Deliver. &nbsp; 03 &nbsp; Repeat.</div></article></div>
+    <div class="section-heading"><div><span class="eyebrow">READY WHEN YOU ARE</span><h2>Meet today’s routes.</h2></div><button class="text-button" id="refresh">Refresh progress ↻</button></div>
+    <div id="unassigned"></div><div class="route-grid" id="routes"><div class="empty-state">Your route cards will appear here after planning.</div></div>
+    <div id="itinerary"></div><div id="comparison"></div>
+  </section>
+  <section id="orders" class="tab-panel" hidden><div class="page-heading"><div><span class="eyebrow">EVERY PARCEL HAS A PLACE</span><h1>The day’s <em>possibilities.</em></h1><p>Start with 50 sample orders or bring your own CSV.</p></div><div class="button-row"><button class="button secondary" id="load-sample">Use sample orders</button><label class="button primary" for="csv-file">Import CSV ↗</label><input id="csv-file" type="file" accept=".csv,text/csv" hidden></div></div><div class="card order-tools"><input id="search" type="search" placeholder="Find an address, customer or parcel…" aria-label="Search orders"><span id="dataset-label">Sample Coimbatore orders</span><button class="text-button" id="download-sample">Download sample CSV ↓</button></div><div class="card table-wrap"><table><thead><tr><th>Order</th><th>Recipient & location</th><th>Parcel</th><th>Payload</th></tr></thead><tbody id="order-rows"></tbody></table></div><p class="fine-print">CSV: id, name, lat, lon, weight_kg. Include depot id 0 with weight 0 as the first row. Optional: customer_name, address, product, phone, ready_min, due_min, service_min. Up to 200 customers.</p></section>
+  <section id="fleet" class="tab-panel" hidden><div class="page-heading"><div><span class="eyebrow">ROOM FOR EVERY DELIVERY</span><h1>A fleet that <em>fits.</em></h1><p>One departure per vehicle. Available capacity is always respected.</p></div></div><form id="planning-form"><div class="fleet-layout"><div class="card fleet-card"><div class="card-heading"><h2>Who’s on the road?</h2><span class="tag">YOUR FLEET</span></div><div id="fleet-controls"></div><p class="capacity-note" id="capacity-note"></p><div class="form-grid"><label>Petrol · ₹ / litre<input name="petrol_price_inr" type="number" min="1" max="500" step=".01" value="102.80" required></label><label>Diesel · ₹ / litre<input name="diesel_price_inr" type="number" min="1" max="500" step=".01" value="92.50" required></label></div><p class="fine-print">Editable reference prices. Fuel and emissions are load-dependent estimates.</p></div><div class="card preferences"><span class="eyebrow">FIND YOUR BALANCE</span><h2>What matters today?</h2><label>Planning engine<select name="algorithm"><option value="ortools">OR-Tools · mixed fleet</option><option value="clarke_wright">Savings seed + fleet adaptation</option><option value="nearest_neighbor">Nearest neighbour + fleet adaptation</option><option value="neural">Neural seed + fleet adaptation</option><option value="all">Compare all engines</option></select></label><div id="weights"></div><p class="fine-print">Delivery windows are soft targets. Capacity is a hard limit. Unassigned parcels stay visible.</p><button class="button primary full" type="submit" id="plan-button">Create dispatch plan <span>↗</span></button></div></div></form></section>
+  <section id="history" class="tab-panel" hidden><div class="page-heading"><div><span class="eyebrow">PICK UP WHERE YOU LEFT OFF</span><h1>A record of <em>good days.</em></h1><p>Dispatches and delivery progress are saved on your server.</p></div></div><div id="history-list" class="route-grid"></div></section>
+  <footer><span class="brand-footer">parcel.</span><span>A calmer way to get there.</span><span>Built around your last mile ↗</span></footer>
+</main>
+<dialog id="settings-dialog"><form id="settings-form"><span class="eyebrow">YOUR WORKSPACE</span><h2>Stay connected.</h2><p>This dashboard uses the server it was opened from.</p><label>Server access key<input id="access-key" type="password" autocomplete="off" placeholder="Only if configured on your server"></label><p class="fine-print">Kept in this tab’s session. Use HTTPS for a hosted server.</p><div class="button-row"><button class="button secondary" type="button" id="settings-close">Cancel</button><button class="button primary" type="submit">Connect ↗</button></div></form></dialog>
+</body></html>

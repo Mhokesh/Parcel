@@ -1,0 +1,6 @@
+-r requirements.txt
+torch>=2.6,<3
+scipy>=1.13,<2
+matplotlib>=3.9,<4
+tqdm>=4.66,<5
+tabulate>=0.9,<1

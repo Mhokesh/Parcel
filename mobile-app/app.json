@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "Parcel",
+    "slug": "or",
+    "owner": "mhokesh",
+    "extra": {
+      "eas": {
+        "projectId": "77c38a09-f341-45f5-90d3-3e1665d208ed"
+      }
+    },
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#f8f7f3",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.orproject.mocvrp",
+      "infoPlist": {
+        "NSLocalNetworkUsageDescription": "Connect to your Parcel dispatch server on the same Wi-Fi network.",
+        "NSAppTransportSecurity": {
+          "NSAllowsLocalNetworking": true
+        }
+      }
+    },
+    "android": {
+      "package": "com.orproject.mocvrp"
+    },
+    "plugins": [
+      "expo-status-bar",
+      "expo-secure-store",
+      "expo-font"
+    ]
+  }
+}
